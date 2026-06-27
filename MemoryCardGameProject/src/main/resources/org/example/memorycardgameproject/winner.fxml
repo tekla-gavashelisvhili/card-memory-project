@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" prefWidth="500.0" prefHeight="500.0"
+      style="-fx-background-color: #0d0d1a;"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.memorycardgameproject.WinnerController">
+
+    <padding>
+        <Insets top="40.0" bottom="40.0" left="40.0" right="40.0"/>
+    </padding>
+
+    <Label text="Victory"
+           style="-fx-font-size: 38px; -fx-font-weight: bold; -fx-text-fill: #e0e0e0;"/>
+
+    <VBox alignment="CENTER" spacing="14.0" prefWidth="300.0"
+          style="-fx-background-color: #1a1a2e; -fx-background-radius: 14;">
+        <padding>
+            <Insets top="24.0" bottom="24.0" left="24.0" right="24.0"/>
+        </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <Label text="Difficulty" prefWidth="120.0"
+                   style="-fx-text-fill: #777788; -fx-font-size: 13px;"/>
+            <Label fx:id="diffLabel" text="Easy"
+                   style="-fx-text-fill: #ccccdd; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <Label text="Score" prefWidth="120.0"
+                   style="-fx-text-fill: #777788; -fx-font-size: 13px;"/>
+            <Label fx:id="finalScoreLabel" text="0"
+                   style="-fx-text-fill: #ccccdd; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <Label text="Moves" prefWidth="120.0"
+                   style="-fx-text-fill: #777788; -fx-font-size: 13px;"/>
+            <Label fx:id="finalMovesLabel" text="0"
+                   style="-fx-text-fill: #ccccdd; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <Label text="Time left" prefWidth="120.0"
+                   style="-fx-text-fill: #777788; -fx-font-size: 13px;"/>
+            <Label fx:id="finalTimeLabel" text="0s"
+                   style="-fx-text-fill: #ccccdd; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <HBox alignment="CENTER_LEFT" spacing="12.0">
+            <Label text="Combo best" prefWidth="120.0"
+                   style="-fx-text-fill: #777788; -fx-font-size: 13px;"/>
+            <Label fx:id="finalComboLabel" text="0"
+                   style="-fx-text-fill: #ccccdd; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+        </HBox>
+
+    </VBox>
+
+    <Button text="Play Again" onAction="#playAgain"
+            prefWidth="200.0" prefHeight="44.0"
+            style="-fx-background-color: #00ffe7; -fx-background-radius: 10; -fx-text-fill: #0d0d1a; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;"/>
+
+    <Button text="Menu" onAction="#goToMenu"
+            prefWidth="120.0" prefHeight="36.0"
+            style="-fx-background-color: transparent; -fx-text-fill: #555566; -fx-font-size: 13px; -fx-border-color: #333344; -fx-border-radius: 8; -fx-background-radius: 8; -fx-cursor: hand;"/>
+
+</VBox>
